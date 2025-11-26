@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>怡業股份有限公司 AI 應用建議報告 | 面試報告</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+        
+        /* Fade In Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Pattern Background */
+        .hero-bg {
+            background-color: #1e293b;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Card Hover Effects */
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-blue-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">AI</div>
+                    <span class="font-bold text-xl text-slate-800 tracking-tight">面試報告</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#intro" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">前言</a>
+                    <a href="#analysis" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">現況分析</a>
+                    <a href="#positioning" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">AI 定位</a>
+                    <a href="#applications" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">應用方向</a>
+                    <a href="#principles" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">原則與角色</a>
+                </div>
+                <!-- Mobile menu button (simple implementation) -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#intro" class="block text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">前言</a>
+                <a href="#analysis" class="block text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">現況分析</a>
+                <a href="#positioning" class="block text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">AI 定位</a>
+                <a href="#applications" class="block text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">應用方向</a>
+                <a href="#principles" class="block text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">原則與角色</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-screen flex items-center justify-center relative pt-16">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/90 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal active">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 text-sm font-semibold mb-6 border border-blue-500/30">
+                面試報告：AI 數位轉型職務
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                怡業股份有限公司<br>
+                <span class="text-blue-400">AI 應用與數位轉型建議</span>
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-300 mb-10 max-w-2xl mx-auto font-light">
+                從產品、工廠到品牌的 AI 協作想像
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-slate-400 text-sm">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span>報告人：高璿程</span>
+                </div>
+                <div class="hidden sm:block text-slate-600">•</div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span>2025/11/27</span>
+                </div>
+            </div>
+            
+            <div class="mt-16 animate-bounce">
+                <a href="#intro" class="text-slate-400 hover:text-white transition-colors">
+                    <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Chapter 1: Intro -->
+    <section id="intro" class="py-20 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <span class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-600 text-lg">1</span>
+                    前言：立場與觀點
+                </h2>
+                <div class="prose prose-lg text-slate-600">
+                    <p class="mb-4">
+                        本報告基於應徵者視角，結合公開資訊（官網、品牌資訊）與個人在 AI 專案實作上的經驗撰寫。
+                    </p>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg my-6">
+                        <p class="text-blue-800 font-medium m-0">這是一份「初步建議」而非診斷結論。實際導入前，仍需與各部門深入訪談。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 reveal delay-100">
+                <h3 class="text-xl font-bold text-slate-800 mb-4">本報告試圖回答的三個問題</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-slate-700">對怡業這樣的公司，AI <b>大概可以幫忙什麼？</b></span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-slate-700">這些應用對同仁的日常工作，可能帶來哪些<b>具體好處？</b></span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-green-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-slate-700">如果我有機會加入，我會<b>怎麼把想法做成真正跑得起來的東西？</b></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 2: Analysis -->
+    <section id="analysis" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">從公開資訊推估的公司樣貌與潛在挑戰</h2>
+                
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover-card reveal delay-100">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">產品與品牌面</h3>
+                    <p class="text-slate-500 text-sm mb-4">產品線豐富 (Peripower 等)，SKU 多且更新快。</p>
+                    <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                        <li>規格與相容性資訊複雜</li>
+                        <li>行銷內容需頻繁更新</li>
+                        <li>客服面對大量產品組合提問</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover-card reveal delay-200">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">生產與工廠面</h3>
+                    <p class="text-slate-500 text-sm mb-4">跨國據點佈局（台灣、大陸、越南）。</p>
+                    <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                        <li>SOP 與檢驗規範跨區同步</li>
+                        <li>異常與客訴資訊需跨地累積</li>
+                        <li>多語文件與溝通需求</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover-card reveal delay-300">
+                    <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">溝通挑戰</h3>
+                    <p class="text-slate-500 text-sm mb-4">一般企業常見的資訊斷層。</p>
+                    <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                        <li>知識散落在大量檔案中</li>
+                        <li>Know-how 依賴資深同仁記憶</li>
+                        <li>報表豐富但需人工整理重點</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 3: Positioning -->
+    <section id="positioning" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal mb-12">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6">我認為 AI 在怡業的定位：不是取代，而是協作</h2>
+            <div class="bg-blue-600 text-white p-6 rounded-xl shadow-lg relative overflow-hidden">
+                <div class="relative z-10">
+                    <h3 class="text-xl font-semibold mb-2">核心定義</h3>
+                    <p class="text-lg opacity-90 leading-relaxed">
+                        「AI 比較像是一個會看文件、會整理資訊、聽得懂人話的助理，<br>
+                        而不是來取代現有系統，更不是來決定一切的人。」
+                    </p>
+                </div>
+                <div class="absolute right-0 bottom-0 opacity-10 transform translate-x-10 translate-y-10">
+                    <svg class="w-64 h-64" fill="currentColor" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal">
+            <h3 class="text-2xl font-bold text-slate-800 mb-8 text-center">建議的三層概念架構</h3>
+            <!-- Architecture Diagram -->
+            <div class="flex flex-col gap-4 max-w-3xl mx-auto">
+                <!-- Layer 3 -->
+                <div class="bg-white border-2 border-blue-200 p-6 rounded-xl shadow-sm text-center relative hover:border-blue-400 transition-colors">
+                    <div class="absolute -left-4 top-1/2 -translate-y-1/2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded rotate-270 md:rotate-0 md:static md:inline-block md:mb-2 md:bg-blue-100 md:text-blue-800">上層</div>
+                    <h4 class="text-lg font-bold text-slate-800">實際應用情境 (Interface)</h4>
+                    <p class="text-slate-600 text-sm mt-2">Web 頁面、聊天視窗、小工具<br>（查產品、回客服、寫報告）</p>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="text-center text-slate-300">
+                    <svg class="w-6 h-6 mx-auto animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                </div>
+
+                <!-- Layer 2 -->
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-indigo-200 p-6 rounded-xl shadow-sm text-center relative hover:border-indigo-400 transition-colors">
+                    <div class="absolute -left-4 top-1/2 -translate-y-1/2 bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded rotate-270 md:rotate-0 md:static md:inline-block md:mb-2 md:bg-indigo-100 md:text-indigo-800">中層（新增）</div>
+                    <h4 class="text-lg font-bold text-slate-800">AI 助理與知識庫 (RAG/LLM)</h4>
+                    <p class="text-slate-600 text-sm mt-2">理解自然語言、整理非結構化文件、翻譯與重寫</p>
+                </div>
+
+                <!-- Arrow -->
+                <div class="text-center text-slate-300">
+                    <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                </div>
+
+                <!-- Layer 1 -->
+                <div class="bg-slate-100 border-2 border-slate-200 p-6 rounded-xl text-center relative hover:border-slate-400 transition-colors">
+                    <div class="absolute -left-4 top-1/2 -translate-y-1/2 bg-slate-600 text-white text-xs font-bold px-2 py-1 rounded rotate-270 md:rotate-0 md:static md:inline-block md:mb-2 md:bg-slate-200 md:text-slate-800">底層</div>
+                    <h4 class="text-lg font-bold text-slate-800">原有系統與資料 (Database)</h4>
+                    <p class="text-slate-600 text-sm mt-2">ERP, MES, PLM, HR 系統<br>（紀錄事實、管理流程、權限控管）</p>
+                </div>
+            </div>
+
+            <!-- New Section 3-3: Workflow Orchestration -->
+            <div class="max-w-3xl mx-auto mt-16 bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-amber-500 rounded-r-xl p-8 shadow-sm reveal">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                    <span class="bg-amber-100 text-amber-700 py-1 px-3 rounded text-sm">關鍵定位</span>
+                    AI 理解人話之後，要交給「流程系統」幫忙做事
+                </h3>
+                <div class="prose text-slate-700">
+                    <p class="mb-4">
+                        對公司來說，真正有價值的，是 AI 能在理解需求之後，幫同仁把事情<b>「接到既有流程」</b>上。
+                        在我的想像裡，AI 並不會去「取代」既有 ERP/MES 系統，而是站在最前面，將「人話」轉譯成「系統看得懂的資料」。
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-amber-100">
+                            <h4 class="font-bold text-amber-700 mb-2">🤖 AI 負責</h4>
+                            <p class="text-sm">聽懂同仁用自然語言描述的需求（報異常、開專案、查數據），並把內容整理成<b>結構化的欄位</b>。</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-amber-100">
+                            <h4 class="font-bold text-amber-700 mb-2">⚙️ 流程系統負責</h4>
+                            <p class="text-sm">根據 AI 整理好的欄位，去建立工單、更新資料庫、送簽、寄通知（ERP/MES/HR）。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 4: Applications -->
+    <section id="applications" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl font-bold text-slate-900">四個「可能特別有幫助」的 AI 應用方向</h2>
+                <p class="text-slate-500 mt-4">針對不同部門痛點的具體想像與流程串接</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- App 1 -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover-card border border-slate-100 reveal flex flex-col h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-blue-100 text-blue-600 rounded-lg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800">產品／專案知識小幫手</h3>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">RD / PM / 業務</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4 flex-grow">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="text-sm font-semibold text-slate-400 mb-1">情境</p>
+                            <p class="text-slate-700">想確認舊專案規格、測試條件，或比較產品差異。</p>
+                        </div>
+                        <div class="bg-blue-600/5 p-4 rounded-lg border border-blue-100">
+                            <p class="text-sm font-semibold text-blue-500 mb-1">AI 解決方案</p>
+                            <p class="text-slate-700 text-sm">「我們以前幫哪些車廠做過出風口支架？」AI 從大量文件中找出資訊，整理成重點並附上來源連結。</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-200">
+                         <div class="flex gap-2 mb-2 items-center">
+                            <span class="text-lg">🔗</span>
+                            <p class="text-sm font-bold text-slate-700">進一步串接工作流程的想像</p>
+                        </div>
+                        <p class="text-sm text-slate-600 bg-amber-50 p-3 rounded border border-amber-100">
+                            當同仁不只是「查資料」，而是「想正式提出一個新專案／打樣需求」時，AI 可以先依照公司的規則，把對話內容整理成專案申請表的欄位，再交給既有的專案管理系統建立紀錄，讓「問問題」自然銜接到「啟動流程」。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- App 2 -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover-card border border-slate-100 reveal delay-100 flex flex-col h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-emerald-100 text-emerald-600 rounded-lg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800">工廠異常與 SOP 查詢</h3>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">工廠現場 / 品保</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4 flex-grow">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="text-sm font-semibold text-slate-400 mb-1">情境</p>
+                            <p class="text-slate-700">現場異常描述不精確、SOP 翻找困難。</p>
+                        </div>
+                        <div class="bg-emerald-600/5 p-4 rounded-lg border border-emerald-100">
+                            <p class="text-sm font-semibold text-emerald-500 mb-1">AI 解決方案</p>
+                            <p class="text-slate-700 text-sm">異常單：AI 自動將口語描述轉為標準分類。<br>SOP：問答式查詢，「某品號終檢標準是什麼？」</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-200">
+                        <div class="flex gap-2 mb-2 items-center">
+                           <span class="text-lg">🔗</span>
+                           <p class="text-sm font-bold text-slate-700">進一步串接工作流程的想像</p>
+                       </div>
+                       <p class="text-sm text-slate-600 bg-amber-50 p-3 rounded border border-amber-100">
+                           在 AI 幫忙把異常內容「整理好」之後，這些欄位其實可以直接丟給公司原本的異常／工單系統，自動建立異常單、指定預設負責單位、寄出通知，而不是再由人重新 key 一次。
+                       </p>
+                   </div>
+                </div>
+
+                <!-- App 3 -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover-card border border-slate-100 reveal delay-200 flex flex-col h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-purple-100 text-purple-600 rounded-lg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800">品牌、客服與行銷助理</h3>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">行銷 / 客服 / 業務</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4 flex-grow">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="text-sm font-semibold text-slate-400 mb-1">情境</p>
+                            <p class="text-slate-700">頻繁更新文案、回答重複性產品相容性問題。</p>
+                        </div>
+                        <div class="bg-purple-600/5 p-4 rounded-lg border border-purple-100">
+                            <p class="text-sm font-semibold text-purple-500 mb-1">AI 解決方案</p>
+                            <p class="text-slate-700 text-sm">文案助手：產生多版本貼文草稿。<br>評論分析：自動彙整客戶回饋優缺點。<br>客服：提供建議回覆草稿。</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-200">
+                        <div class="flex gap-2 mb-2 items-center">
+                           <span class="text-lg">🔗</span>
+                           <p class="text-sm font-bold text-slate-700">進一步串接工作流程的想像</p>
+                       </div>
+                       <p class="text-sm text-slate-600 bg-amber-50 p-3 rounded border border-amber-100">
+                           對於某些類型的客訴或退換貨需求，AI 可以先判斷這是不是符合標準條件，若符合，就把整理好的資料直接交給客服系統／退貨流程建立工單，讓「回覆客人」與「建立後台案件」是一條接起來的流程。
+                       </p>
+                   </div>
+                </div>
+
+                <!-- App 4 -->
+                <div class="bg-slate-50 rounded-2xl p-8 hover-card border border-slate-100 reveal delay-300 flex flex-col h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-rose-100 text-rose-600 rounded-lg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800">管理與 HR 的摘要小幫手</h3>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">管理層 / HR</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4 flex-grow">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="text-sm font-semibold text-slate-400 mb-1">情境</p>
+                            <p class="text-slate-700">會議報表消化時間長、新人重複詢問制度。</p>
+                        </div>
+                        <div class="bg-rose-600/5 p-4 rounded-lg border border-rose-100">
+                            <p class="text-sm font-semibold text-rose-500 mb-1">AI 解決方案</p>
+                            <p class="text-slate-700 text-sm">報表摘要：將複雜數據轉為「一頁式文字重點」。<br>內規問答：讓員工自助查詢福利與流程。</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-200">
+                        <div class="flex gap-2 mb-2 items-center">
+                           <span class="text-lg">🔗</span>
+                           <p class="text-sm font-bold text-slate-700">進一步串接工作流程的想像</p>
+                       </div>
+                       <p class="text-sm text-slate-600 bg-amber-50 p-3 rounded border border-amber-100">
+                           在 AI 幫忙把申請內容摘要好之後，這些摘要與欄位可以直接送進既有的 HR／行政審核流程，讓主管在簽核畫面就看到「AI 幫忙整理過的重點」，又不用改原本的簽核系統。
+                       </p>
+                   </div>
+                </div>
+            </div>
+
+            <!-- Summary Block -->
+            <div class="bg-white border border-blue-200 rounded-xl p-8 shadow-sm reveal relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-2 h-full bg-blue-500"></div>
+                <h3 class="text-lg md:text-xl font-bold text-slate-800 mb-6">綜合四個方向，AI 帶來的可能效益可以簡單歸納成三點：</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="flex gap-3">
+                        <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold">1</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-1">對同仁</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">減少找資料、整理報表、重複寫文案的時間。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold">2</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-1">對流程</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">讓異常回報、知識查詢、客服回覆比較有標準可依。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold">3</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-1">對決策</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">從品質數據與客戶評論中，得到更清楚的「重點摘要」。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Chapter 5 & 6: Principles & Role -->
+    <section id="principles" class="py-20 bg-slate-900 text-slate-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Principles -->
+            <div class="mb-20 reveal">
+                <h2 class="text-3xl font-bold text-white mb-8 border-l-4 border-blue-500 pl-4">使用 AI 的三個堅持</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                        <h4 class="text-xl font-bold text-white mb-2">🔒 資料安全</h4>
+                        <p class="text-sm">公開資訊用雲端，機密與設計細節在受控環境處理，確保 Know-how 不外流。</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                        <h4 class="text-xl font-bold text-white mb-2">🛡️ Human-in-the-loop</h4>
+                        <p class="text-sm">AI 輸出僅是「建議」與「草稿」，決策與最終發布仍由人把關。</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                        <h4 class="text-xl font-bold text-white mb-2">📈 循序漸進</h4>
+                        <p class="text-sm">不求全面翻修，先從明確的小場景開始累積成功案例，再擴大應用。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role -->
+            <div class="bg-gradient-to-br from-blue-900 to-slate-800 rounded-2xl p-8 md:p-12 reveal delay-100">
+                <div class="md:flex items-start justify-between gap-12">
+                    <div class="mb-8 md:mb-0 md:w-1/2">
+                        <h2 class="text-3xl font-bold text-white mb-6">如果能加入，我希望扮演的角色</h2>
+                        <p class="text-lg leading-relaxed text-blue-100 mb-6">
+                            「不是單純寫程式的人，也不是只講概念的人，<br>而是<b>能理解公司實際流程，又能把 AI 工具串接起來的橋樑</b>。」
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <span>對上：用非技術語言說明價值</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <span>對 IT：拆解可實作的架構</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <span>對一線：找出真正省事的痛點</span>
+                            </div>
+                        </div>
+
+                        <!-- New Workflow Integration Role Text -->
+                        <div class="mt-8 pt-6 border-t border-blue-700/50">
+                             <h4 class="text-xl font-bold text-white mb-3">⚡ 特別投入的交界工作</h4>
+                             <p class="text-blue-100 text-sm leading-relaxed mb-4">
+                                我會特別在意處理 AI 層與既有工作流程之間的銜接：
+                             </p>
+                             <ul class="text-sm text-slate-300 space-y-2 mb-4">
+                                 <li>• <b>在使用者側：</b>讓同仁用自然語言描述需求。</li>
+                                 <li>• <b>在系統側：</b>把這些描述轉成既有流程需要的欄位與規則，交給原來的 ERP/MES/HR 系統執行。</li>
+                             </ul>
+                             <p class="text-blue-200 text-sm font-medium">
+                                 讓同仁感覺自己只是把事情講清楚，後面的流程就自動往前走。
+                             </p>
+                        </div>
+
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-white/5 rounded-xl p-6 backdrop-blur-sm border border-white/10">
+                        <h3 class="text-xl font-bold text-white mb-4">我會努力的三個階段</h3>
+                        <ol class="relative border-l border-slate-600 ml-3 space-y-8">
+                            <li class="pl-6 relative">
+                                <span class="absolute -left-1.5 top-1.5 w-3 h-3 bg-blue-500 rounded-full"></span>
+                                <h4 class="font-bold text-white">轉譯</h4>
+                                <p class="text-sm text-slate-400 mt-1">把 AI 能做什麼講成大家聽得懂的版本 (Demo)。</p>
+                            </li>
+                            <li class="pl-6 relative">
+                                <span class="absolute -left-1.5 top-1.5 w-3 h-3 bg-blue-500 rounded-full"></span>
+                                <h4 class="font-bold text-white">實作</h4>
+                                <p class="text-sm text-slate-400 mt-1">做出幾個大家真心覺得好用的小工具 (Quick Wins)。</p>
+                            </li>
+                            <li class="pl-6 relative">
+                                <span class="absolute -left-1.5 top-1.5 w-3 h-3 bg-blue-500 rounded-full"></span>
+                                <h4 class="font-bold text-white">深化</h4>
+                                <p class="text-sm text-slate-400 mt-1">思考哪些資料應轉化為公司長期的智慧資產。</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 py-12 text-center text-sm border-t border-slate-900">
+        <p>怡業股份有限公司 AI 應用建議報告 (Interview Draft)</p>
+        <p class="mt-2">Created for Interview Purposes. Content based on hypothetical scenarios.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
